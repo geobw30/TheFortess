@@ -23,6 +23,7 @@
   var ytPlayer,
     ytMuted = true,
     ytReady = false;
+    ytMuted = true;
   window.onYouTubeIframeAPIReady = function () {
     ytPlayer = new YT.Player("yt-bg-player", {
       videoId: "A2MUlGarXtI",
@@ -180,29 +181,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Ensure the iframe always covers the hero section with no black bars
-  function resizeHeroVideo() {
-    var wrapper = document.getElementById("hero-video-wrapper");
-    var iframe = document.getElementById("hero-video");
+function resizeHeroVideo() {
+    var wrapper = document.getElementById('hero-video-wrapper');
+    var iframe = document.getElementById('hero-video');
     if (!wrapper || !iframe) return;
-    var ww = window.innerWidth,
-      wh = window.innerHeight;
-    var aspect = 16 / 9;
-    if (ww / wh > aspect) {
-      // Wider than 16:9, set height to 100vh, width to cover
-      iframe.style.width = wh * aspect + "px";
-      iframe.style.height = wh + "px";
+    var ww = window.innerWidth, wh = window.innerHeight;
+    var aspect = 16/9;
+    if (ww/wh > aspect) {
+    // Wider than 16:9, set height to 100vh, width to cover
+    iframe.style.width = (wh * aspect) + 'px';
+    iframe.style.height = wh + 'px';
     } else {
-      // Taller than 16:9, set width to 100vw, height to cover
-      iframe.style.width = ww + "px";
-      iframe.style.height = ww / aspect + "px";
+    // Taller than 16:9, set width to 100vw, height to cover
+    iframe.style.width = ww + 'px';
+    iframe.style.height = (ww / aspect) + 'px';
     }
-    iframe.style.top = "50%";
-    iframe.style.left = "50%";
-    iframe.style.transform = "translate(-50%,-50%)";
-  }
-  window.addEventListener("resize", resizeHeroVideo);
-  window.addEventListener("orientationchange", resizeHeroVideo);
-  document.addEventListener("DOMContentLoaded", resizeHeroVideo);
+    iframe.style.top = '50%';
+    iframe.style.left = '50%';
+    iframe.style.transform = 'translate(-50%,-50%)';
+}
+window.addEventListener('resize', resizeHeroVideo);
+window.addEventListener('orientationchange', resizeHeroVideo);
+document.addEventListener('DOMContentLoaded', resizeHeroVideo);
 
   // Spinner
   var spinner = function () {
