@@ -78,7 +78,7 @@
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <div id="navbar-donate-btn">
-                      <a class="btn btn-outline-primary py-2 px-3" href="">
+                      <a class="btn btn-outline-primary py-2 px-3" href="#donate">
                           Donate Now
                           <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                               <i class="fa fa-arrow-right"></i>
@@ -100,11 +100,14 @@
       <div id="hero-fallback-img" class="hero-fallback-img" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:0;overflow:hidden;background:url('img/about-1.jpg') center center/cover no-repeat;opacity:1;"></div>
 
       <!-- YouTube Video Background -->
-      <div style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;overflow:hidden;pointer-events:none;">
-        <iframe id="hero-video" src="https://www.youtube.com/embed/A2MUlGarXtI?autoplay=1&mute=1&loop=1&playlist=A2MUlGarXtI&controls=0&showinfo=0&modestbranding=1&rel=0&vq=hd1080" 
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
-          style="position:absolute;top:50%;left:50%;width:177vw;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;filter:brightness(0.5);">
-        </iframe>
+      <div id="hero-video-wrapper" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;overflow:hidden;pointer-events:none;">
+        <div id="yt-bg-player" style="position:absolute;top:50%;left:50%;width:177vw;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);"></div>
+        <!-- Mute/Unmute Button Overlay -->
+        <button id="yt-mute-btn" aria-label="Mute/Unmute" style="position:absolute;bottom:30px;right:30px;z-index:10;background:rgba(0,0,0,0.5);border:none;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto;">
+          <span id="yt-mute-icon" style="color:white;font-size:1.5rem;">
+            <i class="fas fa-volume-mute"></i>
+          </span>
+        </button>
       </div>
       <!-- Overlay Content -->
       <div class="container position-relative z-2" style="z-index:3;">
@@ -154,12 +157,12 @@
                                 <i class="fa fa-arrow-right"></i>
                             </div>
                         </a>
-                        <a class="btn btn-outline-primary py-2 px-3" href="">
+                        <!-- <a class="btn btn-outline-primary py-2 px-3" href="">
                             Contact Us
                             <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                                 <i class="fa fa-arrow-right"></i>
                             </div>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -328,7 +331,7 @@
 
 
     <!-- Donate Start -->
-    <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg" style="margin-top: 4rem;">
+    <div id="donate" class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg" style="margin-top: 4rem;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -355,16 +358,16 @@
                                         <label class="btn btn-light py-3" for="btnradio4">$150</label>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <button class="btn btn-primary px-5" style="height: 60px;" onclick="window.open('https://www.paypal.com/paypalme/TheFortressUg', '_blank')">
+                                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                    <button class="btn btn-primary px-5 w-100" style="height: 60px;" onclick="window.open('https://www.paypal.com/paypalme/TheFortressUg', '_blank')">
                                         Donate Now <small>PAYPAL</small>
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                             <i class="fa fa-arrow-right"></i>
                                         </div>
                                     </button>
                                 </div>
-                                <div class="col-6">
-                                    <button class="btn btn-primary px-5" style="height: 60px;" onclick="window.open('https://cmnetwork.denarionline.com/Donate/?missionary=Fortress', '_blank')">
+                                <div class="col-12 col-md-6">
+                                    <button class="btn btn-primary px-5 w-100" style="height: 60px;" onclick="window.open('https://cmnetwork.denarionline.com/Donate/?missionary=Fortress', '_blank')">
                                         Donate Now <small>CMN</small>
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                             <i class="fa fa-arrow-right"></i>
@@ -529,12 +532,14 @@ In this photo is one of our joyful young mothers at The Fortress, celebrating a 
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">The<span class="text-white">Fortress</span></h1>
-                    <p class="text-white"><b>Donate to the Fortress:</b> Through our Bank Account below OR through the Donate now Button above</p>
+                    <p class="text-white"><b>Donate to the Fortress:</b> Through our Bank Account below OR through the Donate now Button below</p>
+                    <a class="btn btn-outline-primary py-2 px-3" href="#donate">
+                          Donate Now
+                          <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                              <i class="fa fa-arrow-right"></i>
+                          </div>
+                      </a>
                     <div class="d-flex pt-2">
-                        <!-- <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -574,10 +579,8 @@ In this photo is one of our joyful young mothers at The Fortress, celebrating a 
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" id="backToTopBtn"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
