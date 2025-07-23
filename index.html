@@ -48,11 +48,6 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <h1 class="fw-bold text-primary m-0">The<span class="text-white">Fortress</span></h1>
-                <!-- <small>Follow us:</small>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-instagram"></i></a> -->
             </div>
         </div>
 
@@ -82,12 +77,14 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a> -->
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Donate Now
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
+                    <div id="navbar-donate-btn">
+                      <a class="btn btn-outline-primary py-2 px-3" href="">
+                          Donate Now
+                          <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                              <i class="fa fa-arrow-right"></i>
+                          </div>
+                      </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -101,20 +98,12 @@
     <section class="hero-section position-relative d-flex align-items-center justify-content-center" style="min-height: 100vh; overflow: hidden;">
       <!-- Fallback Hero Image -->
       <div id="hero-fallback-img" class="hero-fallback-img" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:0;overflow:hidden;background:url('img/about-1.jpg') center center/cover no-repeat;opacity:1;"></div>
-<style>
-  .hero-fallback-img {
-    transition: opacity 1s ease;
-    opacity: 1;
-  }
-  .hero-fallback-img.fade-out {
-    opacity: 0 !important;
-  }
-</style>
-      <!-- YouTube Video Background -->
-      <div style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;overflow:hidden;pointer-events:none;">
+
+      <!-- YouTube Video Background (no black bars) -->
+      <div id="hero-video-wrapper" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;overflow:hidden;pointer-events:none;">
         <iframe id="hero-video" src="https://www.youtube.com/embed/A2MUlGarXtI?autoplay=1&mute=1&loop=1&playlist=A2MUlGarXtI&controls=0&showinfo=0&modestbranding=1&rel=0&vq=hd1080" 
           frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
-          style="width:100vw;height:100vh;min-height:100%;min-width:100%;object-fit:cover;pointer-events:none;filter:brightness(0.5);">
+          style="position:absolute;top:50%;left:50%;width:177vw;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;filter:brightness(0.5);">
         </iframe>
       </div>
       <!-- Overlay Content -->
@@ -122,7 +111,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center py-5">
             <h1 class="display-3 fw-bold text-white mb-4 wow fadeInDown">Prevent, Rescue, Restore Dignity and Empower.</h1>
-            <p class="fs-4 text-white-50 mb-5 wow fadeInUp">We believe in the power of unconditional love to transform lives.</p>
+            <p class="fs-4 text-white mb-5 wow fadeInUp">We believe in the power of unconditional love to transform lives.</p>
             <a class="btn btn-primary btn-lg px-5 py-3 shadow-lg wow fadeInUp" href="#donate" style="font-size:1.25rem;">Donate Now
               <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                 <i class="fa fa-arrow-right"></i>
@@ -345,24 +334,12 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
                     <h1 class="display-6 text-white mb-5">We invite you to be a part of what we do</h1>
-                    <p class="text-white-50 mb-0">You can send your donations through PayPal or the Commision Ministers Network</p>
+                    <p class="text-white mb-0">You can send your donations through PayPal or the Commision Ministers Network</p>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="h-100 bg-white p-5">
                         <form>
                             <div class="row g-3">
-                                <!-- <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-light border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div> -->
                                 <div class="col-12">
                                     <div class="btn-group d-flex justify-content-around">
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
@@ -421,9 +398,6 @@
                             <h5>THE DROP-IN CENTRE</h5>
                             <p class="text-primary">A temporary safe loving haven for girls and women in need.</p>
                             <div class="team-social text-center">
-                                <!-- <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -437,9 +411,6 @@
                             <h5>GAREP</h5>
                             <p class="text-primary">Girls At-Risk Empowerment Project serves girls in risky environments.</p>
                             <div class="team-social text-center">
-                                <!-- <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -453,9 +424,6 @@
                             <h5>EDUCATION AND SKILLING</h5>
                             <p class="text-primary">Girls and women are empowered through skilling and education. </p>
                             <div class="team-social text-center">
-                                <!-- <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -468,11 +436,6 @@
                         <div class="team-text bg-light text-center p-4">
                             <h5>WOMAN OF PURPOSE COMMUNITY OUTREACH</h5>
                             <p class="text-primary">Focused on helping women in the community through both on station training, and outreaches.</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -483,7 +446,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5" style="margin-top: 4rem;">
+    <!-- <div class="container-xxl py-5" style="margin-top: 4rem;">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Stories</div>
@@ -506,9 +469,9 @@ A few days ago, while visiting a particular school, I was struck by how naïve a
 We also spoke about purpose — encouraging these young stars to look beyond their current challenges and focus on their gifts, potential, and the bigger picture of their future.
 
  What a beautiful and impactful training it was!</p>
-                        <h5 class="mb-1">Prevention is better than cure indeed!</h5>
+                        <h5 class="mb-1">Prevention is better than cure indeed!</h5> -->
                         <!-- <span class="fst-italic">than cure indeed!</span> -->
-                    </div>
+                    <!-- </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
@@ -534,9 +497,9 @@ Today, thanks to The Fortress and another organization, I am studying Nursing at
 All this was possible because of The Fortress’s love and empowerment. To the staff and sponsors—your giving has given me a future!
 
 When I graduate, I hope to help many others as a nurse and build a better life. Long live The Fortress—more girls like me need you.</p>
-                        <h5 class="mb-1">Dream come true!</h5>
+                        <h5 class="mb-1">Dream come true!</h5> -->
                         <!-- <span class="fst-italic">One of our Fortress Champions</span> -->
-                    </div>
+                    <!-- </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
@@ -550,13 +513,13 @@ At The Fortress, we embrace this blessing by growing vegetables, maize, sugarcan
 In this photo is one of our joyful young mothers at The Fortress, celebrating a bountiful maize harvest. Very soon, we’ll be enjoying porridge and posho made from it!
 
  Consider visiting us — come see and be a part of this life-giving experience!</p>
-                        <h5 class="mb-1">The Joy of the Harvest</h5>
+                        <h5 class="mb-1">The Joy of the Harvest</h5> -->
                         <!-- <span class="fst-italic">Profession</span> -->
-                    </div>
+                    <!-- </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
@@ -566,7 +529,7 @@ In this photo is one of our joyful young mothers at The Fortress, celebrating a 
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">The<span class="text-white">Fortress</span></h1>
-                    <p><b>Donate to the Fortress:</b> Through our Bank Account below OR through the Donate now Button above</p>
+                    <p class="text-white"><b>Donate to the Fortress:</b> Through our Bank Account below OR through the Donate now Button above</p>
                     <div class="d-flex pt-2">
                         <!-- <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>

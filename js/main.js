@@ -1,3 +1,18 @@
+// Show navbar donate button only when scrolled away from hero section
+document.addEventListener("DOMContentLoaded", function () {
+  var donateBtn = document.getElementById("navbar-donate-btn");
+  var heroSection = document.querySelector(".hero-section");
+  if (donateBtn && heroSection) {
+    function checkHeroInView() {
+      var rect = heroSection.getBoundingClientRect();
+      var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      donateBtn.style.display = inView ? "none" : "";
+    }
+    window.addEventListener("scroll", checkHeroInView);
+    window.addEventListener("resize", checkHeroInView);
+    checkHeroInView();
+  }
+});
 (function ($) {
   "use strict";
   // Hero Fallback Image and Video Transition
@@ -32,6 +47,30 @@
     // Always show fallback for minFallbackTime, then transition and load video
     setTimeout(fadeOutFallbackAndLoadVideo, minFallbackTime);
   });
+
+  // Ensure the iframe always covers the hero section with no black bars
+function resizeHeroVideo() {
+    var wrapper = document.getElementById('hero-video-wrapper');
+    var iframe = document.getElementById('hero-video');
+    if (!wrapper || !iframe) return;
+    var ww = window.innerWidth, wh = window.innerHeight;
+    var aspect = 16/9;
+    if (ww/wh > aspect) {
+    // Wider than 16:9, set height to 100vh, width to cover
+    iframe.style.width = (wh * aspect) + 'px';
+    iframe.style.height = wh + 'px';
+    } else {
+    // Taller than 16:9, set width to 100vw, height to cover
+    iframe.style.width = ww + 'px';
+    iframe.style.height = (ww / aspect) + 'px';
+    }
+    iframe.style.top = '50%';
+    iframe.style.left = '50%';
+    iframe.style.transform = 'translate(-50%,-50%)';
+}
+window.addEventListener('resize', resizeHeroVideo);
+window.addEventListener('orientationchange', resizeHeroVideo);
+document.addEventListener('DOMContentLoaded', resizeHeroVideo);
 
   // Spinner
   var spinner = function () {
