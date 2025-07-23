@@ -96,103 +96,48 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Prevent, Rescue, Restore Dignity and Empower.</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">We believe in the power of unconditional love to transform lives.</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Join Us! Turn Victims into Heroes!</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Transforming Lives by the Power of Love.</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-3.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">New Hope For the Future</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Volunteers do not necessarily have the time, they just have the heart.</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-4.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Save More Lifes With Our Helping Hand</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
-                                        Learn More
-                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+
+    <!-- Hero Start -->
+    <section class="hero-section position-relative d-flex align-items-center justify-content-center" style="min-height: 100vh; overflow: hidden;">
+      <!-- Fallback Hero Image -->
+      <div id="hero-fallback-img" class="hero-fallback-img" style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:0;overflow:hidden;background:url('img/about-1.jpg') center center/cover no-repeat;opacity:1;"></div>
+<style>
+  .hero-fallback-img {
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  .hero-fallback-img.fade-out {
+    opacity: 0 !important;
+  }
+</style>
+      <!-- YouTube Video Background -->
+      <div style="position:absolute;top:0;left:0;width:100vw;height:100vh;z-index:1;overflow:hidden;pointer-events:none;">
+        <iframe id="hero-video" src="https://www.youtube.com/embed/A2MUlGarXtI?autoplay=1&mute=1&loop=1&playlist=A2MUlGarXtI&controls=0&showinfo=0&modestbranding=1&rel=0&vq=hd1080" 
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+          style="width:100vw;height:100vh;min-height:100%;min-width:100%;object-fit:cover;pointer-events:none;filter:brightness(0.5);">
+        </iframe>
+      </div>
+      <!-- Overlay Content -->
+      <div class="container position-relative z-2" style="z-index:3;">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center py-5">
+            <h1 class="display-3 fw-bold text-white mb-4 wow fadeInDown">Prevent, Rescue, Restore Dignity and Empower.</h1>
+            <p class="fs-4 text-white-50 mb-5 wow fadeInUp">We believe in the power of unconditional love to transform lives.</p>
+            <a class="btn btn-primary btn-lg px-5 py-3 shadow-lg wow fadeInUp" href="#donate" style="font-size:1.25rem;">Donate Now
+              <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                <i class="fa fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
         </div>
-    </div>
-    <!-- Carousel End -->
+      </div>
+      <!-- JS moved to main.js -->
+    </section>
+    <!-- Hero End -->
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" style="margin-top: 4rem;">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -235,7 +180,7 @@
 
 
     <!-- Causes Start -->
-    <div class="container-xxl bg-light my-5 py-5">
+    <div class="container-xxl bg-light my-5 py-5" style="margin-top: 4rem;">
         <div class="container py-5">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">CORE VALUES</div>
@@ -339,7 +284,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" style="margin-top: 4rem;">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
@@ -394,7 +339,7 @@
 
 
     <!-- Donate Start -->
-    <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+    <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg" style="margin-top: 4rem;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -460,7 +405,7 @@
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" style="margin-top: 4rem;">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Programs</div>
@@ -538,7 +483,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" style="margin-top: 4rem;">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Stories</div>
@@ -616,7 +561,7 @@ In this photo is one of our joyful young mothers at The Fortress, celebrating a 
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 4rem;">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
